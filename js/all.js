@@ -19,8 +19,9 @@ $(document).ready(function(){
             alert("請選擇性別"); 
         }
         else{
-            var bmi =( w / ( h * h )).toFixed(2);
-            $("#bmi_result").html(bmi),
+            var num = (w / ( h * h )).toFixed(2)*100;
+            var bmi = (w / ( h * h )).toFixed(2);
+            $("#bmi_result").animateNumber({ number: num ,numberStep: $.animateNumber.numberStepFactories.separator('.')},1500),
             $("#height").val(""),
             $("#weight").val("");
 

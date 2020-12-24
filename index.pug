@@ -65,21 +65,27 @@ head
 
 body
     nav.navbar.navbar-expand-lg.navbar-dark.bg-dark 
-    .container-fliud.bg-dark
+    .container-fluid.bg-dark
         .container#app
-            h1 BMI、體脂肪率 計算器
+            h1 <i class="fas fa-laptop-medical"></i>BMI體脂肪率計算器
             small.text-white 輸入單位 : ( 公分 ) cm
-            .row.d-flex.justify-content-center
-                .col-12.bg-dark
-                    .input-group.input-group-lg
-                        input.form-control(id="height" type='number' placeholder='請輸入身高') 
-                        input.form-control(id="weight" type='number' placeholder='請輸入體重')
-                        input.form-control(id="age" type='number' placeholder='請輸入年齡')
+            .form-row.d-flex.justify-content-center
+                .col-sm-6.col-md-3.my-2
+                    input.form-control(id="height" type='number' placeholder='請輸入身高')
+                .col-sm-6.col-md-3.my-2
+                    input.form-control(id="weight" type='number' placeholder='請輸入體重')
+                .col-sm-6.col-md-3.my-2
+                    input.form-control(id="age" type='number' placeholder='請輸入年齡')
+                .col-sm-6.col-md-3.my-2
+                    .form-group.mb-1
                         select.custom-select(id="sex")
                             option(value='2') 請選擇性別
                             option(value='1') 男
                             option(value='0') 女
-                        button.btn.btn-info.btn-border-radius(id="calc") 開始計算
+                .col-sm-12
+                    button.btn.btn-info.btn-block.calc-btn(id="calc") 開始計算
+            .row
+                .col-12
                     table.table.table-bordered.table-dark.text-center
                         thead
                             tr.bg-secondary
@@ -128,6 +134,8 @@ body
 
         //------------------------------JS連結檔------------------------------//
         script(src='js/jquery.js')
+        script(src='js/animateNumber.js')
         script(src='js/bootstrap.js')
         script(src='js/all.js')
         script(src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js')
+            
