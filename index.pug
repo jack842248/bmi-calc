@@ -4,10 +4,8 @@ head
     //------------------------------使用的字符編碼------------------------------//
     meta(charset='UTF-8')
 
-
     //------------------------------優先使用IE最新版本和Chrome------------------------------//
     meta(http-equiv='X-UA-compatible' content='ie=edge,chrome=1')
-
 
     //------------------------------符合各裝置最佳預覽------------------------------//
     meta(name='viewport'
@@ -18,50 +16,23 @@ head
         maximum-scale='1'
         user-scalable='no')
 
-
     //------------------------------網頁頁面資訊------------------------------//
     title BMI、體脂肪率 計算器
     meta(name='description' content='BMI、體脂肪率、計算')
     meta(name='author' content='黃俊傑')
 
-
-    //------------------------------頁面在Facebook、Plurk、LINE資訊------------------------------//
-    meta(property='og:title' content='BMI、體脂肪率 計算器')
-    meta(property='og:description' content='BMI、體脂肪率、計算')
-    meta(property='og:type' content='website')
-    meta(property='og:url' content='https://jack842248.github.io/bmi-calc/')
-    meta(property='og:image' content='顯示圖片')
-    meta(property='og:site_name' content='jack842248')
-
-
-    //------------------------------頁面在Google+、Pinterest、LinkedIn資訊------------------------------//
-    meta(itemprop='name' content='BMI、體脂肪率、計算')
-    meta(itemprop='description' content='BMI、體脂肪率 計算器')
-    meta(itemprop='image' content='顯示圖片')
-
-
-    //------------------------------頁面在twitter資訊------------------------------//
-    meta(name='twitter:title' content='BMI、體脂肪率、計算')
-    meta(name='twitter:description' content='BMI、體脂肪率 計算器')
-    meta(name='twitter:card' content='website')
-    meta(name='twitter:image' content='顯示圖片')
-    meta(name='twitter:site' content='jack842248')
-
-
     //------------------------------在各瀏覽器上網址的顯示------------------------------//
     link(rel='canonical' href='https://jack842248.github.io/bmi-calc/')
-    link(rel='icon' href='images/favicon.ico')
-
+    link(rel='icon' href='favicon.ico')
 
     //------------------------------讓連結都以新開視窗方式打開------------------------------//
     //- base(target='_blank')
 
-
     //------------------------------CSS樣式連結------------------------------//
-
     link(rel='stylesheet' type="text/css" href='css/bootstrap.css')
     link(rel='stylesheet' type="text/css" href='css/all.css')
     link(rel='stylesheet' type="text/css" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css')
+
 
 body
     nav.navbar.navbar-expand-lg.navbar-dark.bg-dark 
@@ -79,7 +50,7 @@ body
                 .col-sm-6.col-md-3.my-2
                     .form-group.mb-1
                         select.custom-select(id="sex")
-                            option(value='2') 請選擇性別
+                            option(value='2' hidden) 請選擇性別
                             option(value='1') 男
                             option(value='0') 女
                 .col-sm-12
@@ -127,9 +98,6 @@ body
                                 td(width="30%") 肥胖
                                 td(width="35%") > = 24
                                 td(width="35%") > = 28
-
-
-
 
 
         //------------------------------JS連結檔------------------------------//

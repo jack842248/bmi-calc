@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $("#calc").click(function(){
 
-        var h = $("#height").val() / 100,
+        let h = $("#height").val() / 100,
             w = $("#weight").val(),
             a = $("#age").val(),
             s = $("#sex").val();
@@ -19,8 +19,8 @@ $(document).ready(function(){
             alert("請選擇性別"); 
         }
         else{
-            var num = (w / ( h * h )).toFixed(2)*100;
-            var bmi = (w / ( h * h )).toFixed(2);
+            let num = ( w / ( h * h ) ).toFixed(2)*100;
+            let bmi = ( w / ( h * h ) ).toFixed(2);
             $("#bmi_result").animateNumber({ number: num ,numberStep: $.animateNumber.numberStepFactories.separator('.')},1500),
             $("#height").val(""),
             $("#weight").val("");
@@ -53,7 +53,7 @@ $(document).ready(function(){
                 $(".tr4").addClass("bg-danger");
             }
 
-            var fat = (( bmi * 1.2 ) + ( a * 0.23 - 5.4 ) - ( 10.8 * s )).toFixed(1);
+            let fat = (( bmi * 1.2 ) + ( a * 0.23 - 5.4 ) - ( 10.8 * s )).toFixed(1);
             $("#fat_result").html(fat),
             $("#age").val(""),
             $("#sex").val("2");
